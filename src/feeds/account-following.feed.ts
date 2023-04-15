@@ -8,6 +8,7 @@ export class AccountFollowingFeed extends Feed<AccountFollowingFeedResponse, Acc
   query = '';
   enableGroups = true;
   includesHashtags = true;
+  count = 12; // default from instagram web as of 2023-04-15
 
   id: number | string;
   @Expose()
@@ -29,6 +30,7 @@ export class AccountFollowingFeed extends Feed<AccountFollowingFeedResponse, Acc
         query: this.query,
         enable_groups: this.enableGroups,
         includes_hashtags: this.includesHashtags,
+        count: this.count,
       },
     });
     this.state = body;

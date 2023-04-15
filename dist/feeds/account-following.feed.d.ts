@@ -9,6 +9,7 @@ export declare class AccountFollowingFeed extends Feed<
   query: string;
   enableGroups: boolean;
   includesHashtags: boolean;
+  count: number;
   id: number | string;
   nextMaxId: string;
   set state(body: AccountFollowingFeedResponse);

@@ -54,14 +54,17 @@ export declare class FeedFactory {
     options?:
       | string
       | number
-      | Partial<Pick<AccountFollowersFeed, 'searchSurface' | 'order' | 'query' | 'enableGroups' | 'id'>>,
+      | Partial<Pick<AccountFollowersFeed, 'searchSurface' | 'order' | 'query' | 'enableGroups' | 'id' | 'count'>>,
   ): AccountFollowersFeed;
   accountFollowing(
     options?:
       | string
       | number
       | Partial<
-          Pick<AccountFollowingFeed, 'searchSurface' | 'order' | 'query' | 'enableGroups' | 'includesHashtags' | 'id'>
+          Pick<
+            AccountFollowingFeed,
+            'searchSurface' | 'order' | 'query' | 'enableGroups' | 'includesHashtags' | 'id' | 'count'
+          >
         >,
   ): AccountFollowingFeed;
   news(): NewsFeed;

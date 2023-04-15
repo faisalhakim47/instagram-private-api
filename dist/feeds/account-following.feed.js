@@ -29,6 +29,7 @@ class AccountFollowingFeed extends feed_1.Feed {
     this.query = '';
     this.enableGroups = true;
     this.includesHashtags = true;
+    this.count = 12;
   }
   set state(body) {
     this.moreAvailable = !!body.next_max_id;
@@ -45,6 +46,7 @@ class AccountFollowingFeed extends feed_1.Feed {
         query: this.query,
         enable_groups: this.enableGroups,
         includes_hashtags: this.includesHashtags,
+        count: this.count,
       },
     });
     this.state = body;
