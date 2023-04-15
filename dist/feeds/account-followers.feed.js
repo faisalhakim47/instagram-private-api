@@ -28,6 +28,7 @@ class AccountFollowersFeed extends feed_1.Feed {
     this.order = 'default';
     this.query = '';
     this.enableGroups = true;
+    this.count = 12;
   }
   set state(body) {
     this.moreAvailable = !!body.next_max_id;
@@ -42,6 +43,7 @@ class AccountFollowersFeed extends feed_1.Feed {
         order: this.order,
         query: this.query,
         enable_groups: this.enableGroups,
+        count: this.count,
       },
     });
     this.state = body;

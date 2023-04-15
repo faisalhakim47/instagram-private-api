@@ -10,6 +10,7 @@ export class AccountFollowersFeed extends Feed<AccountFollowersFeedResponse, Acc
   order?: 'default' = 'default';
   query = '';
   enableGroups = true;
+  count = 12; // default from instagram web as of 2023-04-15
 
   id: number | string;
   @Expose()
@@ -29,6 +30,7 @@ export class AccountFollowersFeed extends Feed<AccountFollowersFeedResponse, Acc
         order: this.order,
         query: this.query,
         enable_groups: this.enableGroups,
+        count: this.count,
       },
     });
     this.state = body;

@@ -8,6 +8,7 @@ export declare class AccountFollowersFeed extends Feed<
   order?: 'default';
   query: string;
   enableGroups: boolean;
+  count: number;
   id: number | string;
   nextMaxId: string;
   set state(body: AccountFollowersFeedResponse);
